@@ -1,0 +1,12 @@
+{
+  "strategies": [
+    "Strategy A",
+    "Strategy B",
+    "Strategy C"
+  ],
+  "files": {
+    "Strategy A": "A",
+    "Strategy B": "B",
+    "Strategy C": "C"
+  }
+}
