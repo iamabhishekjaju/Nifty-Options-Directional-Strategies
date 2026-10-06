@@ -187,8 +187,16 @@ def style(fig, h=320, legend=True):
     return fig
 
 
+def plot(fig):
+    """Full-width plotly chart; works on old and new Streamlit (use_container_width was replaced by width)."""
+    try:
+        st.plotly_chart(fig, width="stretch", config={"displayModeBar": False})
+    except TypeError:
+        st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
+
+
 def show(fig, h=320, legend=True):
-    st.plotly_chart(style(fig, h, legend), use_container_width=True, config={"displayModeBar": False})
+    plot(style(fig, h, legend))
 
 
 DIV = lambda: [[0, T["neg"]], [0.5, T["mid"]], [1, T["pos"]]]
@@ -356,7 +364,7 @@ with tab_ov:
                                 paper_bgcolor="rgba(0,0,0,0)", font=dict(family=FONT),
                                 annotations=[dict(text="Lot<br>allocation", showarrow=False,
                                                   font=dict(size=10, color=T["ink2"]))])
-            st.plotly_chart(alloc, use_container_width=True, config={"displayModeBar": False})
+            plot(alloc)
 
     with panel("Performance analytics", "Trade-level, day-level and tail statistics at the current settings"):
         c1, c2, c3, c4 = st.columns(4)
