@@ -4,7 +4,7 @@ Portfolio construction, hedge-fund-style risk analytics and an interactive dashb
 intraday **Nifty weekly option-selling strategies** (Strategy A, B, C) run on Rs 1 Cr, with hedge legs, slippage and
 transaction costs included in the results.
 
-**Live dashboard: https://nifty-directional-strategies.streamlit.app/**
+**Live dashboard: https://nifty-directional-strategies.streamlit.app/**  |  [Dashboard guide (PDF)](docs/Dashboard_Guide.pdf)
 
 ![equity](docs/equity.png)
 
@@ -64,7 +64,7 @@ Nifty 50 and cash. The strategy rules themselves are not published; `results/` c
 optlab/      portfolio.py (lots, hedge, slippage, costs, stops, intraday marks) - risk.py (analytics)
 app/         dashboard.py (Streamlit)
 results/     per-trade logs with hedge legs, per-minute marks, Nifty 50 daily closes (small)
-docs/        method.md (assumptions & caveats), results.md
+docs/        Dashboard_Guide.pdf (plain-language guide to every tab), method.md (assumptions & caveats), results.md
 tests/       pytest
 ```
 
