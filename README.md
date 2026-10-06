@@ -4,6 +4,8 @@ Portfolio construction, hedge-fund-style risk analytics and an interactive dashb
 intraday **Nifty weekly option-selling strategies** (Strategy A, B, C) run on Rs 1 Cr, with hedge legs, slippage and
 transaction costs included in the results.
 
+**Live dashboard: https://nifty-directional-strategies.streamlit.app/**
+
 ![equity](docs/equity.png)
 
 ## Dashboard
